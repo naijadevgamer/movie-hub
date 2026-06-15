@@ -73,7 +73,7 @@ const Sidebar = ({
   };
 
   const sidebarContent = (
-    <div className="bg-background">
+    <div className="bg-background h-full">
       <div className="px-5 py-8 flex items-center justify-between">
         <Logo />
         {onClose && (
