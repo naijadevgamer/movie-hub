@@ -55,7 +55,7 @@ npm install -g pnpm
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/naijadevgamer/movie-hub.git
 cd movie-hub
 ```
 
@@ -252,16 +252,16 @@ src/
 
 ```bash
 # Start development server
-npm run dev
+pnpm dev
 
 # Build for production
-npm run build
+pnpm build
 
 # Preview production build
-npm run preview
+pnpm preview
 
 # Type checking
-npx tsc --noEmit
+pnpm exec tsc --noEmit
 ```
 
 ---
