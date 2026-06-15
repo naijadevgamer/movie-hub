@@ -157,7 +157,7 @@ const SearchPage = () => {
         </Button>
       </div>
 
-      <div className="mb-8 flex items-center justify-between gap-2">
+      <div className="mb-8 flex items-center justify-between gap-2 flex-wrap">
         <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
           {hasSearchQuery
             ? `Search results for "${debouncedSearchInput}"`
