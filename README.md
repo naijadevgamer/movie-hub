@@ -2,7 +2,7 @@
 
 A modern, production-grade movie discovery dashboard built with React, TypeScript, and the TMDB API. Browse popular movies, search with advanced filters, and explore detailed movie information with a beautiful, responsive interface.
 
-![MovieHub Screenshot](./assets/movie-hub.png)
+![MovieHub Screenshot](/movie-hub.png)
 
 ## ✨ Features
 
