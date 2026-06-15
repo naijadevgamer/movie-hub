@@ -34,11 +34,11 @@ const MovieMeta = ({ movie }: MovieMetaProps) => {
     },
     {
       label: "Budget",
-      value: `$${movie.budget.toLocaleString()}`,
+      value: `$${movie.budget?.toLocaleString()}`,
     },
     {
       label: "Revenue",
-      value: `$${movie.revenue.toLocaleString()}`,
+      value: `$${movie.revenue?.toLocaleString()}`,
     },
   ];
 

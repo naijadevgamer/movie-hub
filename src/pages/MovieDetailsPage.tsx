@@ -37,7 +37,7 @@ const MovieDetailsPage = () => {
 
   // Get certification from release_dates
   const getCertification = (): string => {
-    const usRelease = movie.release_dates?.results?.find(
+    const usRelease = movie?.release_dates?.results?.find(
       (r) => r.iso_3166_1 === "US",
     );
     if (usRelease?.release_dates?.length) {
