@@ -195,7 +195,7 @@ src/
 
 - Server state → TanStack Query for all API data
 - UI state → React hooks
-- URL state → search params for search/filter persistence
+- URL state → search params as the single source of truth for search, filters, and pagination
 - No external state management library needed
 
 ### Routing
@@ -226,6 +226,8 @@ src/
 - URL-synced state (shareable search URLs)
 - Filters: Genre, Year, Rating, Sort By
 - Combined search + filter functionality
+- Client-side filtering in search mode to support advanced filtering with TMDB search results
+- Server-side filtering in discovery mode using TMDB discover endpoints
 - Pagination with page numbers
 
 ### Movie Details
@@ -278,7 +280,7 @@ pnpm exec tsc --noEmit
 ## 📝 Notes
 
 - The TMDB API has a limit of 500 pages per endpoint, so pagination is capped accordingly
-- Search with genre/rating filters uses the discover endpoint due to TMDB API limitations
+- TMDB separates search and discover functionality. Discovery mode uses TMDB server-side filtering, while search mode applies advanced filters client-side after search results are returned.
 - Favorites are stored in localStorage and persist across sessions
 - The app requires an internet connection to fetch movie data from the TMDB API
 

@@ -60,14 +60,12 @@ export const searchMovies = async (
   filters?: Filters,
   page: number = 1,
 ): Promise<MovieResponse> => {
-  // If we have a search query, use search endpoint with filters
+  // If we have a search query, use search endpoint
   if (query.trim()) {
     const params: Record<string, any> = { query, page };
 
-    // Apply filters to search
-    if (filters?.genre) params.with_genres = filters.genre;
-    if (filters?.year) params.primary_release_year = filters.year;
-    if (filters?.rating) params["vote_average.gte"] = filters.rating;
+    // Only pass year to TMDB (it's the only filter search endpoint reliably supports)
+    if (filters?.year) params.year = filters.year;
 
     const { data } = await api.get(ENDPOINTS.search, { params });
     return data;
