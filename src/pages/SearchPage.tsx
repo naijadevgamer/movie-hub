@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Funnel, Search } from "lucide-react";
 import Button from "../components/common/Button";
@@ -50,7 +50,7 @@ const SearchPage = () => {
   );
 
   // Sync debounced search to URL
-  useState(() => {
+  useEffect(() => {
     if (debouncedSearchInput !== query) {
       updateURL({ q: debouncedSearchInput || undefined, page: undefined });
     }
